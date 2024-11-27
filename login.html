@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            background-image: url("abstract-2d-colorful-wallpaper-with-grainy-gradients_23-2151001481.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .maintitle{
+            color: white;
+            margin-top: 80px;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .maintitle span{
+            color: rgb(136, 59, 23);
+        }
+        
+        .header{
+            display: flex;
+        }
+        .buttons{
+            margin-left: 388px;
+            margin-top: 53px;
+        
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav ul{
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+        .nav li{
+            position: relative;
+        }
+        .nav a{
+            white-space: nowrap;
+            padding: 15px 23px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav li:hover a{
+            color: #823208;
+        }
+        .nav-link::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #823208 ;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        .nav-link:hover::before {
+            visibility: visible;
+            width: 80%;
+        }
+    
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            margin-top: 105px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 94%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #a50c0c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #041e8f;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .signup-link a {
+            color: #a50c0c;
+            text-decoration: none;
+        }
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+        .nav a.active {
+            color: #823208;
+        }
+        
+        .nav-link.active::before,
+        .nav-link:hover::before {
+            visibility: visible;
+            width: 80%;
+        }
+        
+        .nav-link.active::before {
+            background-color: #823208;
+            visibility: visible;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="maintitle">GHA<span>RRAD</span></h1>
+        <div class="buttons">
+            <nav class="nav">
+                <ul>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="services.html">Services</a></li>
+                    <li class="nav-link"><a href="creattask.html">Create A task</a></li>
+                    <li class="nav-link"><a href="contactus.html">Contact Us</a></li>
+                    <li class="nav-link"><a href="login.html" class="active">Login</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

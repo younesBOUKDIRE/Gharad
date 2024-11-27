@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="creattask.css">
+    <title>Create A Task | GHARRAD</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="maintitle">GHA<span>RRAD</span></h1>
+        <div class="buttons">
+            <nav class="nav">
+                <ul>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="services.html">Services</a></li>
+                    <li class="nav-link"><a href="creattask.html" class="active">Create A task</a></li>
+                    <li class="nav-link"><a href="contactus.html">Contact Us</a></li>
+                    <li class="nav-link"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="body">
+        <form id="taskForm">
+            <table>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" id="lastName" required></td>
+                </tr>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" id="firstName" required></td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" id="phoneNumber" required></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <select id="city">
+                            <option value="Casablanca">Casablanca</option>
+                            <option value="Marrakech">Marrakech</option>
+                            <option value="Rabat">Rabat</option>
+                            <option value="Agadir">Agadir</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Task:</td>
+                    <td>
+                        <select id="task">
+                            <option value="Menuisier">Menuisier</option>
+                            <option value="Teinturier">Teinturier</option>
+                            <option value="Technicien">Technicien</option>
+                            <option value="Constructeur">Constructeur</option>
+                            <option value="Medecin">Medecin</option>
+                            <option value="Chauffeur">Chauffeur</option>
+                            <option value="Nounou">Nounou</option>
+                            <option value="Decoration">Decoration</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Done</button></td>
+                    <td><button type="button" onclick="window.location.href='index.html'">Cancel</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

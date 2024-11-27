@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GHARRAD</title>
+    <style>
+        body{
+            background-image: url("abstract-2d-colorful-wallpaper-with-grainy-gradients_23-2151001481.avif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .maintitle{
+            color: white;
+            margin-top: 80px;
+            margin-left: 20px;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .maintitle span{
+            color: rgb(136, 59, 23);
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        .form-group label{
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .form-group input{
+            height: 40px;
+        }
+        .form-group textarea{
+            height: 120px;
+        }
+        .submit-btn{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #823208;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover{
+            background-color: rgb(136, 59, 23);
+        }
+        .header {
+            display: flex;
+            
+        }
+        
+        .maintitle span{
+            color: rgb(136, 59, 23);
+        }
+        
+        .header{
+            display: flex;
+            margin-left: 80px;
+        }
+        .buttons{
+            margin-left: 388px;
+            margin-top: 53px;
+        
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav ul{
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+        .nav li{
+            position: relative;
+        }
+        .nav a{
+            white-space: nowrap;
+            padding: 15px 23px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav li:hover a{
+            color: #823208;
+        }
+        .nav-link::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #823208 ;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        .nav-link:hover::before {
+            visibility: visible;
+            width: 80%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="maintitle">GHA<span>RRAD</span></h1>
+        <div class="buttons">
+            <nav class="nav">
+                <ul>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="services.html">Services</a></li>
+                    <li class="nav-link"><a href="creattask.html">Create A task</a></li>
+                    <li class="nav-link"><a href="contactus.html" class="active">Contact Us</a></li>
+                    <li class="nav-link"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="maintitle">Contact <span>Us</span></h2>
+        <form action="submit_contact_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
